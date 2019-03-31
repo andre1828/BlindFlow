@@ -50,14 +50,14 @@ export default class DiscoverMosaic extends React.Component {
   render() {
     return (
       <>
-        <div className="search-bar">
+        {/* <div className="search-bar">
           <input type="text" onChange={this.handleInputChange} />
           <i
             id="searchIcon"
             className="fa fa-search"
             onClick={this.handleSearchClick}
           />
-        </div>
+        </div> */}
         <div className="mosaic">
           {this.state.podcasts.map((p, index) => (
             <div className="thumbnail" key={index}>

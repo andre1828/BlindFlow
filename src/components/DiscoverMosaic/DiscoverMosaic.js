@@ -21,26 +21,6 @@ export default class DiscoverMosaic extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSearchClick = this.handleSearchClick.bind(this)
   }
-  componentDidMount() {
-    //   fetch(
-    //     "https://api.listennotes.com/api/v1/podcasts/25212ac3c53240a880dd5032e547047b/recommendations?safe_mode=1",
-    //     {
-    //       headers: {
-    //         "X-RapidAPI-Key": "cf4e5c8db7msh41757ca85a83017p122ddfjsn6c39dc48c906"
-    //       }
-    //     }
-    //   )
-    //     .then(res => res.json())
-    //     .then(podcasts =>
-    //       this.setState({
-    //         podcasts: podcasts.recommendations.map(p => (
-    //           <div className="thumbnail" key={p.id}>
-    //             <img src={p.thumbnail} alt={p.title} />
-    //           </div>
-    //         ))
-    //       })
-    //     )
-  }
 
   handleInputChange(e) {
     var searchTerm = e.target.value

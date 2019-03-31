@@ -1,0 +1,26 @@
+.player-controls {
+    background-color: #368f8b;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+/* button color #d3d4d9 */
+i {
+    font-size: 26px;
+    color: #d3d4d9;
+    cursor: pointer;
+}
+#play-button {
+    font-size: 32px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 23px;
+}
+
+/* https://coolors.co/246a73-368f8b-101049-f3dfc1-ddbea8 */

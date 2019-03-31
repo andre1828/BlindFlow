@@ -1,0 +1,10 @@
+:root {
+    --main-color : #101049ef;
+    --accent-color: #1ee8a4;
+}
+
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    /* margin: 20px; */
+    background-color: var(--main-color);
+}

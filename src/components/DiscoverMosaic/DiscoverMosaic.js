@@ -59,6 +59,7 @@ export default class DiscoverMosaic extends React.Component {
           />
         </div> */}
         <div className="mosaic">
+          {"DISCOVEEEER"}
           {this.state.podcasts.map((p, index) => (
             <div className="thumbnail" key={index}>
               <img

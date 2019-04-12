@@ -2,7 +2,6 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
 import { BrowserRouter, Route, Link } from "react-router-dom"
-import Menu from "./components/Menu/Menu"
 import DiscoverMosaic from "./components/DiscoverMosaic/DiscoverMosaic"
 import SubscriptionsMosaic from "./components/SubscriptionsMosaic/SubscriptionsMosaic"
 import PlayerControls from "./components/PlayerControls/PlayerControls"
@@ -15,8 +14,6 @@ class Home extends React.Component {
           <div className="menu">
             <Link className="menu-option" to="/podcasts">Your podcasts</Link>
             <Link className="menu-option" to="/discover">Discover</Link>
-           
-            {/* <p className="menu-option"> Discover</p> */}
             <div className="search-bar">
               <input type="text" onChange={this.handleInputChange} />
               <i

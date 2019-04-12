@@ -74,5 +74,3 @@ export default class DiscoverMosaic extends React.Component {
     )
   }
 }
-
-// export default DiscoverMosaic

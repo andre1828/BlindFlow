@@ -12,8 +12,6 @@ class Home extends React.Component {
       <>
         <BrowserRouter>
           <div className="menu">
-            <Link className="menu-option" to="/podcasts">Your podcasts</Link>
-            <Link className="menu-option" to="/discover">Discover</Link>
             <div className="search-bar">
               <input type="text" onChange={this.handleInputChange} />
               <i
@@ -23,8 +21,7 @@ class Home extends React.Component {
               />
             </div>
           </div>
-          <Route path="/discover" component={DiscoverMosaic} />
-          <Route path="/podcasts" component={SubscriptionsMosaic} />
+          <Route path="/" component={DiscoverMosaic} />
         </BrowserRouter>
         <PlayerControls />
       </>

@@ -1,34 +1,30 @@
 import React from "react"
 
 export default class SubscriptionsMosaic extends React.Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        thumbs: [],
-        podcasts: []
-      }
-    }
-    componentDidMount() {
-      // fetch("https://jsonplaceholder.typicode.com/photos/")
-      //   .then(res => res.json())
-      //   .then(res => {
-      //     var thumbs = res.splice(0, 20)
-      //     // console.log(thumbs)
-      //     this.setState({ thumbs: thumbs })
-      //     this.setState({
-      //       podcasts: this.state.thumbs.map(t => (
-      //         <div className="thumbnail" key={t.id}>
-      //           <img src={t.thumbnailUrl} alt={t.title} />
-      //         </div>
-      //       ))
-      //     })
-      //   })
-    }
-    render() {
-      return (
-        <>
-          <div className="mosaic">{this.state.podcasts}</div>
-        </>
-      )
+  constructor(props) {
+    super(props)
+    this.state = {
+      thumbs: [],
+      podcasts: []
     }
   }
+  componentDidMount() {
+  }
+  render() {
+    return (
+      <>
+        <div className="mosaic">
+          {this.state.podcasts.length === 0 ? (
+            <div>Your are not subscribed to any podcasts</div>
+          ) : (
+            this.state.podcasts.map(podcast => (
+              <div className="thumbnail" key={podcast.id}>
+                <img src={podcast.thumbnailUrl} alt={podcast.title} />
+              </div>
+            ))
+          )}
+        </div>
+      </>
+    )
+  }
+}

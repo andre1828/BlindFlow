@@ -43,23 +43,18 @@ export default class DiscoverMosaic extends React.Component {
       .then(res => this.setState({ podcasts: res.splice(0, 20) }))
   }
 
-  getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+  componentDidMount() {
+    fetch("https://gpodder.net/toplist/10.json", {
+      method: "GET"
+    })
+      .then(res => res.json())
+      .then(res => this.setState({ podcasts: res.splice(0, 20) }))
   }
 
   render() {
     return (
       <>
-        {/* <div className="search-bar">
-          <input type="text" onChange={this.handleInputChange} />
-          <i
-            id="searchIcon"
-            className="fa fa-search"
-            onClick={this.handleSearchClick}
-          />
-        </div> */}
         <div className="mosaic">
-          {"DISCOVEEEER"}
           {this.state.podcasts.map((p, index) => (
             <div className="thumbnail" key={index}>
               <img
